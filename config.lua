@@ -16,7 +16,7 @@ Config.Farming = {
         PlantingToolDurability = '100', --This is the amount of hit points the planting tool has
         PlantingToolUsage = '1',  --This is the amount of hit points the planting tool takes per plant
         PlantProp = 'yarrow01_p', --The prop model this is what will spawn in game when you plant.
-        SoilName = 'soil', -- This is the database name of the soil required to plant the seed.  [false for none]
+        SoilName = false, -- This is the database name of the soil required to plant the seed.  [false for none]
         FertName = 'fertilizer', --This is the item that will be used to fertilize the plant
         FertTimeRemove = 0, --amount of time in ms the fertilizer will take off the TimetoGrow (if you do not want to use fertilizer for the plant set this too 0 and the option wont show)
         Seedname = 'Yarrow_Seed', --This is the database name of the seed that will be used to plant the plant
@@ -35,7 +35,7 @@ Config.Farming = {
         },
     }, -- too add more plants just copy and paste the table and change what you need
     {
-        Webhooked = true, --if true when someone plants this a webhook will be sent
+        Webhooked = false, --if true when someone plants this a webhook will be sent
         Type = 'Hop', --Set this has to be unique to each plant, once set once do not change it will break the database
         PlantingTool = 'hoe', --This is the database name of the item that you have to have in your inventory in order to plant the crop
         PlantingToolDurability = '100',  --This is the amount of hit points the planting tool has
@@ -59,6 +59,131 @@ Config.Farming = {
             },
         },
     }, -- too add more plants just copy and paste the table and change what you need
+    {
+        Webhooked = false, --if true when someone plants this a webhook will be sent
+        Type = 'Corn', --Set this has to be unique to each plant, once set once do not change it will break the database
+        PlantingTool = 'hoe', --This is the database name of the item that you have to have in your inventory in order to plant the crop
+        PlantingToolDurability = '100',  --This is the amount of hit points the planting tool has
+        PlantingToolUsage = '1',  --This is the amount of hit points the planting tool takes per plant
+        PlantProp = 'crp_cornstalks_bc_sim', --The prop model this is what will spawn in game when you plant.
+        SoilName = false, -- This is the database name of the soil required to plant the seed. [false for none]
+        FertName = 'fertilizer', --This is the item that will be used to fertilize the plant
+        FertTimeRemove = 5000, --amount of time in ms the fertilizer will take off the TimetoGrow (if you do not want to use fertilizer for the plant set this too 0 and the option wont show)
+        Seedname = 'cornseed', --This is the database name of the seed that will be used to plant the plant
+        SeedsRequired = 2, --Amount of seeds required to plant
+        HarvestItem = 'consumable_corn', --This is the database name of the item you will recieve when you harvest the plant
+        HarvestAmount = 5, --This is the amount you will recieve when harvesting the plant
+        TimetoGrow = 600000, --The time in ms it will take the plant to grow (60000 is one minute)
+        Joblock = false, --If you want to joblock this plant set true, if not then set false
+        Jobs = {
+            {
+                JobName = 'doctor', --the name of the job
+            }, --you can have as many jobs as you want just copy and paste the table and change what you need
+            {
+                JobName = 'police',
+            },
+        },
+    },
+    {
+        Webhooked = false, --if true when someone plants this a webhook will be sent
+        Type = 'Carrot', --Set this has to be unique to each plant, once set once do not change it will break the database
+        PlantingTool = 'hoe', --This is the database name of the item that you have to have in your inventory in order to plant the crop
+        PlantingToolDurability = '100',  --This is the amount of hit points the planting tool has
+        PlantingToolUsage = '1',  --This is the amount of hit points the planting tool takes per plant
+        PlantProp = 'crp_carrots_aa_sim', --The prop model this is what will spawn in game when you plant.
+        SoilName = false, -- This is the database name of the soil required to plant the seed. [false for none]
+        FertName = 'fertilizer', --This is the item that will be used to fertilize the plant
+        FertTimeRemove = 5000, --amount of time in ms the fertilizer will take off the TimetoGrow (if you do not want to use fertilizer for the plant set this too 0 and the option wont show)
+        Seedname = 'carrotseed', --This is the database name of the seed that will be used to plant the plant
+        SeedsRequired = 2, --Amount of seeds required to plant
+        HarvestItem = 'consumable_carrot', --This is the database name of the item you will recieve when you harvest the plant
+        HarvestAmount = 5, --This is the amount you will recieve when harvesting the plant
+        TimetoGrow = 600000, --The time in ms it will take the plant to grow (60000 is one minute)
+        Joblock = false, --If you want to joblock this plant set true, if not then set false
+        Jobs = {
+            {
+                JobName = 'doctor', --the name of the job
+            }, --you can have as many jobs as you want just copy and paste the table and change what you need
+            {
+                JobName = 'police',
+            },
+        },
+    },
+    {
+        Webhooked = false, --if true when someone plants this a webhook will be sent
+        Type = 'Potato', --Set this has to be unique to each plant, once set once do not change it will break the database
+        PlantingTool = 'hoe', --This is the database name of the item that you have to have in your inventory in order to plant the crop
+        PlantingToolDurability = '100',  --This is the amount of hit points the planting tool has
+        PlantingToolUsage = '1',  --This is the amount of hit points the planting tool takes per plant
+        PlantProp = 'crp_potato_aa_sim', --The prop model this is what will spawn in game when you plant.
+        SoilName = false, -- This is the database name of the soil required to plant the seed. [false for none]
+        FertName = 'fertilizer', --This is the item that will be used to fertilize the plant
+        FertTimeRemove = 5000, --amount of time in ms the fertilizer will take off the TimetoGrow (if you do not want to use fertilizer for the plant set this too 0 and the option wont show)
+        Seedname = 'potatoseed', --This is the database name of the seed that will be used to plant the plant
+        SeedsRequired = 2, --Amount of seeds required to plant
+        HarvestItem = 'potato', --This is the database name of the item you will recieve when you harvest the plant
+        HarvestAmount = 5, --This is the amount you will recieve when harvesting the plant
+        TimetoGrow = 600000, --The time in ms it will take the plant to grow (60000 is one minute)
+        Joblock = false, --If you want to joblock this plant set true, if not then set false
+        Jobs = {
+            {
+                JobName = 'doctor', --the name of the job
+            }, --you can have as many jobs as you want just copy and paste the table and change what you need
+            {
+                JobName = 'police',
+            },
+        },
+    },
+    {
+        Webhooked = false, --if true when someone plants this a webhook will be sent
+        Type = 'Apple', --Set this has to be unique to each plant, once set once do not change it will break the database
+        PlantingTool = 'hoe', --This is the database name of the item that you have to have in your inventory in order to plant the crop
+        PlantingToolDurability = '100',  --This is the amount of hit points the planting tool has
+        PlantingToolUsage = '1',  --This is the amount of hit points the planting tool takes per plant
+        PlantProp = 'p_tree_apple_01', --The prop model this is what will spawn in game when you plant.
+        SoilName = false, -- This is the database name of the soil required to plant the seed. [false for none]
+        FertName = 'fertilizer', --This is the item that will be used to fertilize the plant
+        FertTimeRemove = 5000, --amount of time in ms the fertilizer will take off the TimetoGrow (if you do not want to use fertilizer for the plant set this too 0 and the option wont show)
+        Seedname = 'Apple_Seed', --This is the database name of the seed that will be used to plant the plant
+        SeedsRequired = 2, --Amount of seeds required to plant
+        HarvestItem = 'apple', --This is the database name of the item you will recieve when you harvest the plant
+        HarvestAmount = 5, --This is the amount you will recieve when harvesting the plant
+        TimetoGrow = 600000, --The time in ms it will take the plant to grow (60000 is one minute)
+        Joblock = false, --If you want to joblock this plant set true, if not then set false
+        Jobs = {
+            {
+                JobName = 'doctor', --the name of the job
+            }, --you can have as many jobs as you want just copy and paste the table and change what you need
+            {
+                JobName = 'police',
+            },
+        },
+    },
+    {
+        Webhooked = false, --if true when someone plants this a webhook will be sent
+        Type = 'Blueberry', --Set this has to be unique to each plant, once set once do not change it will break the database
+        PlantingTool = 'hoe', --This is the database name of the item that you have to have in your inventory in order to plant the crop
+        PlantingToolDurability = '100',  --This is the amount of hit points the planting tool has
+        PlantingToolUsage = '1',  --This is the amount of hit points the planting tool takes per plant
+        PlantProp = 'crp_berry_aa_sim', --The prop model this is what will spawn in game when you plant.
+        SoilName = false, -- This is the database name of the soil required to plant the seed. [false for none]
+        FertName = 'fertilizer', --This is the item that will be used to fertilize the plant
+        FertTimeRemove = 5000, --amount of time in ms the fertilizer will take off the TimetoGrow (if you do not want to use fertilizer for the plant set this too 0 and the option wont show)
+        Seedname = 'blueberryseed', --This is the database name of the seed that will be used to plant the plant
+        SeedsRequired = 2, --Amount of seeds required to plant
+        HarvestItem = 'blueberry', --This is the database name of the item you will recieve when you harvest the plant
+        HarvestAmount = 5, --This is the amount you will recieve when harvesting the plant
+        TimetoGrow = 600000, --The time in ms it will take the plant to grow (60000 is one minute)
+        Joblock = false, --If you want to joblock this plant set true, if not then set false
+        Jobs = {
+            {
+                JobName = 'doctor', --the name of the job
+            }, --you can have as many jobs as you want just copy and paste the table and change what you need
+            {
+                JobName = 'police',
+            },
+        },
+    },
 }
 
 
